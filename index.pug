@@ -1,0 +1,144 @@
+doctype html
+html(lang="en")
+  head
+    link(rel='stylesheet' type='text/css' href='css/normalize.css')
+    link(rel='stylesheet', type='text/css', href'https://npmcdn.com/tachyons@4.0.0-beta.27/css/tachyons.min.css')
+    link(rel='stylesheet', type='text/css', href='public/stylesheets/main.css')
+    title= pageTitle
+    meta(name='viewport', content='width=device-width')
+
+  body
+    #hidden-menu
+      nav
+        li Home _to Mike
+        li Mike _to Resume (down two)
+        li Portfolio
+        li Contact
+        li Blog
+
+
+    #top.container
+      header
+        nav
+          li Home _to Mike
+          li Mike _to CV (down two)
+          li Portfolio
+          li Contact
+          li Blog
+
+    .landing
+      img.landing_background(src='images/mike.jpg')
+      section
+        h1 Mike
+        h2.
+          Web Developer.
+          Formerly bearded man.
+          Cat lover.
+
+    //- Need to refactor later and insert blocks for article elements
+    #about.about
+      section
+        article
+          h1.title About me
+          picture.about_picture
+            img(src='images/profile.png')
+            img(src='images/profile_hover.png')
+          p I'm Ben. I'm a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repudiandae cumque veritatis repellat velit reprehenderit quod, quos ullam consectetur?
+
+        article
+          h3 Clean code
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+        article
+          h3 structure
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+        article
+          h3 Ruby
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+    //- Need to refactor later and insert blocks for article.work__item elements
+    .work
+      section
+        h1.title Projects
+        .content
+          article.work__item
+            p 12 May
+            h2.
+              Working
+              with React
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+          article.work__item
+            p 12 May
+            h2.
+              Ruby
+              on Rails
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+          article.work__item
+            p 12 May
+            h2.
+              Air BnB
+              for Pets
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+          article.work__item
+            p 12 May
+            h2.
+              Treehouses
+              in Trees
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+          article.work__item
+            p 12 May
+            h2 React Game
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+          article.work__item
+            p Future
+            h2 Need Help ?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+
+    //- Need to refactor later and insert blocks for article.resume_article elements
+    #resume.resume
+      section
+        h1.title Experience
+          .content
+            article.resume_article
+              h2.
+                Codaisseur Academy
+                Trainee
+              p 7 Week period
+            
+            article.resume_article
+              h2.
+                TomTom 
+                Customer Support Representative
+              p It sucked.
+            
+            article.resume_article
+              h2.
+                Professional
+                Procrastinator
+              p I'm damned good.
+  
+    .contact
+      section
+        h1#typed Interested?
+        p Feel free to email or phone.
+          div
+            button(class='btn').
+              Mail me
+            button(class='btn').
+                Call me
+    footer
+      section
+        ul
+          li Facebook
+          li LinkedIn
+          li GitHub
+          li Twitter
+        p.
+          Pretty cool, right?
+          Not bad at all?
