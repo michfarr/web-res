@@ -1,9 +1,9 @@
 doctype html
 html(lang="en")
   head
-    link(rel='stylesheet' type='text/css' href='css/normalize.css')
+    link(rel='stylesheet' type='text/css' href='public/stylesheets/normalize.css')
     link(rel='stylesheet', type='text/css', href='https://npmcdn.com/tachyons@4.0.0-beta.27/css/tachyons.min.css')
-    link(rel='stylesheet', type='text/css', href='public/stylesheets/main.css')
+    link(rel='stylesheet', type='text/css', href='public/stylesheets/style.css')
     title= pageTitle
     meta(name='viewport', content='width=device-width')
 
@@ -16,19 +16,14 @@ html(lang="en")
           a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#resume') Resume
           a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#contact') Contact
           a.link.dim.white.dib.ba.bw1.b--white-10(href='#') Blog
+    
+    .spacer
 
-    .landing.pt6
-      img.landing_background(src='images/mike.jpg')
-      section
-        h1 Mike
-        h2.
-          Web Developer.
-          Formerly bearded man.
-          Cat lover.
+
 
     //- Need to refactor later and insert blocks for article elements
     #about.about
-      section
+      section.dib
         article
           h1.title About me
           picture.about_picture
@@ -47,20 +42,30 @@ html(lang="en")
         article
           h3 Ruby
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
+          
+      section.dib
+        article.mw5.right.bg-white.br3.pa3.pa4-ns.mv3.ba.b--black-10
+          .tc
+            img.br-100.h4.w4.dib.ba.b--black-05.pa2(src='images/mike.jpg', title='Mike')
+            section
+              h1.f3.mb2 Mike
+              h2.f5.fw4.gray.mt0.
+                Web Developer.
+                Formerly bearded man.
+                Cat lover.
 
     //- Need to refactor later and insert blocks for article.work__item elements
-    #portfolio.portfolio
+    #portfolio.ma2.bg--black-100
       section
         h1.title Projects
         .content
           article.pa3.pa5-ns.dib-ns
             h1.f2 TicTacToe with React.js
+            //- image max-width = 475px
             img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            p.measure.lh-copy.b.
+              Tic-Tac-Toe game using React.js, Feathers.js, Sockets.io, and MongoDB. 
+               It was initially a two-person, two-day project.
             p.measure.lh-copy.
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
@@ -69,6 +74,7 @@ html(lang="en")
               
           article.pa3.pa5-ns.dib-ns
             h1.f2 Such Project, Very Wow
+            //- image max-width = 475px
             img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
             p.measure.lh-copy.
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
@@ -83,6 +89,7 @@ html(lang="en")
             
           article.pa3.pa5-ns.dib-ns
             h1.f2 Greatest Project Ever
+            //- image max-width = 475px 
             img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
             p.measure.lh-copy.
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
@@ -94,41 +101,83 @@ html(lang="en")
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
               vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
               no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+    #portfolio2
+      section
+        ul.cf.list.pl0.ml0
+          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+            .pa4
+              <span class="f4 f1-ns b">Aa</span>
+              <p class="lh-copy measure f6">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                <code class="f6 db">#000000</code>
+                <code class="f6 db">#FFFF00</code>
+                  
+          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+            .pa4
+              <span class="f4 f1-ns b">Aa</span>
+              <p class="lh-copy measure f6">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                <code class="f6 db">#555555</code>
+                <code class="f6 db">#EEEEEE</code>
+                  
+          li.fl.w-100.w-50-m.w-25-l.div-style.pa2
+            .pa4
+              <span class="f4 f1-ns b">Aa</span>
+              <p class="lh-copy measure f6">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                <code class="f6 db">#000000</code>
+                <code class="f6 db">#999999</code>
+                  
+          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+            .pa4
+              <span class="f4 f1-ns b">Aa</span>
+              <p class="lh-copy measure f6">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                <code class="f6 db">#000000</code>
+                <code class="f6 db">#AAAAAA</code>
 
     //- Need to refactor later and insert blocks for article.resume_article elements
     #resume.resume
       section
-        h1.title Experience
-          .content
-            article.resume_article
-              h2.
-                Codaisseur Academy
-                Trainee
-              p 7 Week period
-              // Database icon by Icons8
-              p.
-              img(src='https://maxcdn.icons8.com/iOS7/PNG/25/Data/database-25.png', title='database-icon', width='25')
-              | Experience with PostgreSQL & MongoDB
-              // Genealogy icon by Icons8
-              p.
-              img(src='https://maxcdn.icons8.com/iOS7/PNG/25/Data/genealogy-25.png', title='tree-icon', width='25')
-              | Object Oriented Programming with Ruby & Javascript
-              // Bug icon by Icons8
-              p.
-              img(src='https://maxcdn.icons8.com/iOS7/PNG/25/Programming/bug-25.png', title='bug-icon', width='25')
-              | TDD/BDD with Ruby using RSpec & with Javascript using Mocha
-            
-            article.resume_article
-              h2.
-                TomTom 
-                Customer Support Representative
-              p It sucked.
-            
-            article.resume_article
-              h2.
-                Professional
-                Procrastinator
-              p I'm damned good.
+        h1 Experience
+        article
+          h2 Codaisseur Academy
+          | Trainee
+          p 7 Week period
+          // Source Code icon by Icons8
+          img.dib(src='https://maxcdn.icons8.com/iOS7/PNG/100/Programming/source_code-100.png', title='Source Code', width='100')
+          .dib
+            p Experience using PostgreSQL & MongoDB
+            p Object Oriented Programming with Ruby & Javascript
+            p TDD/BDD with Ruby using RSpec & with Javascript using Mocha
+            p Terminal commands using Bash & ZSH shells
+
+        article
+          h2 TomTom 
+          | Customer Support Representative
+          p It sucked.
+          
+        article
+          h2 Procrastinator
+          |  Professional Level
+          p I'm damned good.
   
     #contact.contact
       section
