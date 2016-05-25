@@ -1,52 +1,30 @@
 doctype html
 html(lang="en")
   head
-    link(rel='stylesheet' type='text/css' href='public/stylesheets/normalize.css')
-    link(rel='stylesheet', type='text/css', href='https://npmcdn.com/tachyons@4.0.0-beta.27/css/tachyons.min.css')
-    link(rel='stylesheet', type='text/css', href='public/stylesheets/style.css')
     title= pageTitle
-    meta(name='viewport', content='width=device-width')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='public/stylesheets/normalize.css')
+    link(rel='stylesheet', href='https://npmcdn.com/tachyons@4.0.0-beta.27/css/tachyons.min.css')
+    link(rel='stylesheet', type='text/css', href='public/stylesheets/style.css')
 
   body
 
     header.bg-black-40.fixed.w-100.ph3.pv3.pv4-ns.ph4-m.ph5-l
-        nav.f6.fw6.ttu.tracked
-          a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#about') About
-          a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#portfolio') Portfolio
-          a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#resume') Resume
-          a.link.dim.white.dib.mr3.ba.bw1.b--white-10(href='#contact') Contact
-          a.link.dim.white.dib.ba.bw1.b--white-10(href='#') Blog
-    
-    .spacer
+      nav.dt.f6.fw6.ttu.tracked
+        a.dtc.v-mid.mid-gray.link.dim.w-25(href='#', title='Home')
+          img.dib.w2.h2.br-100(src='https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/contacts-25.png', alt='Site Name', width='25')
+        a.link.dim.white.dib.mr3.ba.bw1.b--white-10.pa3(href='#about') About
+        a.link.dim.white.dib.mr3.ba.bw1.b--white-10.pa3(href='#portfolio') Portfolio
+        a.link.dim.white.dib.mr3.ba.bw1.b--white-10.pa3(href='#resume') Resume
+        a.link.dim.white.dib.mr3.ba.bw1.b--white-10.pa3(href='#contact') Contact
+        a.link.dim.white.dib.ba.bw1.b--white-10.pa3(href='#') Blog
 
-
-
-    //- Need to refactor later and insert blocks for article elements
-    #about.about
-      section.dib
-        article
-          h1.title About me
-          picture.about_picture
-            img(src='images/profile.png')
-            img(src='images/profile_hover.png')
-          p I'm Mike. I'm a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repudiandae cumque veritatis repellat velit reprehenderit quod, quos ullam consectetur?
-
-        article
-          h3 Clean code
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
-
-        article
-          h3 Structure
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
-
-        article
-          h3 Ruby
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia odio doloribus eligendi.
-          
+    #intro.pt6
       section.dib
         article.mw5.right.bg-white.br3.pa3.pa4-ns.mv3.ba.b--black-10
           .tc
-            img.br-100.h4.w4.dib.ba.b--black-05.pa2(src='images/mike.jpg', title='Mike')
+            img.br-100.h4.w4.dib.ba.b--black-05.pa2(src='https://maxcdn.icons8.com/iOS7/PNG/100/Very_Basic/contacts-100.png', title='Mike', width='100')
             section
               h1.f3.mb2 Mike
               h2.f5.fw4.gray.mt0.
@@ -54,107 +32,128 @@ html(lang="en")
                 Formerly bearded man.
                 Cat lover.
 
+    .pv6
+
+    //- Need to refactor later and insert blocks for article elements
+    #about.pv3.mv3
+      section
+        article.dib.w-20.ph2.mh4
+          h1.title About me
+          picture.about_picture
+            img(src='images/profile.png')
+            img(src='images/profile_hover.png')
+          p.
+            I'm Mike. I'm a Lorem ipsum dolor sit amet, consectetur adipisicing 
+            elit. Exercitationem repudiandae cumque veritatis repellat velit 
+            reprehenderit quod, quos ullam consectetur?
+
+        article.dib.w-20.ph2.mh4
+          h3 Clean code
+          p.
+            Lorem ipsum dolor sit amet, consectetur adipisicing 
+            elit. Voluptatibus officia odio doloribus eligendi.
+
+        article.dib.w-20.ph2.mh4
+          h3 Structure
+          p.
+            Lorem ipsum dolor sit amet, consectetur adipisicing 
+            elit. Voluptatibus officia odio doloribus eligendi.
+
+        article.dib.w-20.ph2.mh4
+          h3 Ruby
+          p.
+            Lorem ipsum dolor sit amet, consectetur adipisicing 
+            elit. Voluptatibus officia odio doloribus eligendi.
+
     //- Need to refactor later and insert blocks for article.work__item elements
-    #portfolio.ma2.bg--black-100
-      section
-        h1.title Projects
-        .content
-          article.pa3.pa5-ns.dib-ns
-            h1.f2 TicTacToe with React.js
-            //- image max-width = 475px
-            img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
-            p.measure.lh-copy.b.
-              Tic-Tac-Toe game using React.js, Feathers.js, Sockets.io, and MongoDB. 
-               It was initially a two-person, two-day project.
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
-              
-          article.pa3.pa5-ns.dib-ns
-            h1.f2 Such Project, Very Wow
-            //- image max-width = 475px
-            img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            
-          article.pa3.pa5-ns.dib-ns
-            h1.f2 Greatest Project Ever
-            //- image max-width = 475px 
-            img.mw-33.f5.measure(src='img/space.jpg', alt='outer space')
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            p.measure.lh-copy.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-              no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    
-    #portfolio2
-      section
-        ul.cf.list.pl0.ml0
-          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
-            .pa4
-              <span class="f4 f1-ns b">Aa</span>
-              <p class="lh-copy measure f6">
+    #portfolio.pv3.mv3
+      .portfolio-lg.bg--black-100
+        section
+          h1.title Projects
+          .content
+            article.pa3.pa4-ns.dib-ns.w-31
+              h2
+                a.db.pv1.hover-gray.focus-gray.black.link.f2(href='#') TicTacToe with React.js
+              //- image max-width = 475px
+              img.w-30.f5.measure(src='img/space.jpg', alt='outer space')
+              p.measure.lh-copy.b.
+                Tic-Tac-Toe game using React.js, Feathers.js, Sockets.io, and MongoDB. 
+                 It was initially a two-person, two-day project.
+              p.measure.lh-copy.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Steclita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+            article.pa3.pa5-ns.dib-ns.w-31
+              h2
+                a.db.pv1.hover-gray.focus-gray.black.link.f2(href='#') Such Project, Very Wow
+              //- image max-width = 475px
+              img.w-30.f5.measure(src='img/space.jpg', alt='Incredible')
+              p.measure.lh-copy.b.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat.
+              p.measure.lh-copy.
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
                 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                 no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-                <code class="f6 db">#000000</code>
-                <code class="f6 db">#FFFF00</code>
-                  
-          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
-            .pa4
-              <span class="f4 f1-ns b">Aa</span>
-              <p class="lh-copy measure f6">
+            article.pa3.pa5-ns.dib-ns.w-31
+              h2
+                a.db.pv1.hover-gray.focus-gray.black.link.f2(href='#') Greatest Project Ever
+              //- image max-width = 475px 
+              img.w-30.f5.measure(src='img/space.jpg', alt='What a project')
+              p.measure.lh-copy.b.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat.
+              p.measure.lh-copy.
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
                 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                 no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-                <code class="f6 db">#555555</code>
-                <code class="f6 db">#EEEEEE</code>
-                  
-          li.fl.w-100.w-50-m.w-25-l.div-style.pa2
-            .pa4
-              <span class="f4 f1-ns b">Aa</span>
-              <p class="lh-copy measure f6">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      .portfolio-sm
+        section
+          ul.cf.list.pl0.ml0
+            li.fl.w-100.w-50-m.w-25-l.style-div.pa2 
+              .pa4
+                a.f4.f1-ns.b.db.pv1.hover-gray.focus-gray.black.link(href='#!') Pet Me!
+                p.lh-copy.measure.f6.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-                <code class="f6 db">#000000</code>
-                <code class="f6 db">#999999</code>
-                  
-          li.fl.w-100.w-50-m.w-25-l.style-div.pa2
-            .pa4
-              <span class="f4 f1-ns b">Aa</span>
-              <p class="lh-copy measure f6">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+              .pa4
+                a.f4.f1-ns.b.db.pv1.hover-gray.focus-gray.black.link(href='#!') Hourify
+                p.lh-copy.measure.f6.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-                <code class="f6 db">#000000</code>
-                <code class="f6 db">#AAAAAA</code>
+            li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+              .pa4
+                a.f4.f1-ns.b.db.pv1.hover-gray.focus-gray.black.link(href='#!') Stutor
+                p.lh-copy.measure.f6.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+            li.fl.w-100.w-50-m.w-25-l.style-div.pa2
+              .pa4
+                a.f4.f1-ns.b.db.pv1.hover-gray.focus-gray.black.link(href='#!') Musicode
+                p.lh-copy.measure.f6.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
     //- Need to refactor later and insert blocks for article.resume_article elements
-    #resume.resume
+    #resume.pv3.mv3
       section
         h1 Experience
         article
@@ -173,28 +172,45 @@ html(lang="en")
           h2 TomTom 
           | Customer Support Representative
           p It sucked.
-          
+
         article
           h2 Procrastinator
           |  Professional Level
           p I'm damned good.
-  
-    #contact.contact
+
+    #contact.pv3.mv3
       section
         h1#typed Interested?
         p Feel free to email or phone.
-          div
+          .dib.pa3.ma3
             button(class='btn').
               Mail me
             button(class='btn').
-                Call me
-    footer
+              Call me
+
+    footer.pv3.mv3
       section
-        ul
-          li Facebook
-          li LinkedIn
-          li GitHub
-          li Twitter
-        p.
-          Pretty cool, right?
-          Not bad at all?
+        ul.social.list
+          li.dib
+            .cage
+              a.link.github(href='#', title='GitHub')
+                svg.svg-icon.icon-1(viewbox='0 0 512 512')
+                  path(d='M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z')
+
+          li.dib
+            .cage
+              a.link.linkedin(href='#', title='LinkedIn')
+                svg.svg-icon.icon-2(viewbox='0 0 512 512')
+                  path(d='M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z')
+
+          li.dib
+            .cage
+              a.link.facebook(href='#', title='Facebook')
+                svg.svg-icon.icon-3(viewbox='0 0 512 512')
+                  path(d='M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z')
+
+          li.dib
+            .cage
+              a.link.twitter(href='#', title='Twitter')
+                svg.svg-icon.icon-4(viewbox='0 0 512 512')
+                  path(d='M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z')

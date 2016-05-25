@@ -1,8 +1,58 @@
-.spacer {
-  padding: 7.5em;
-}
-
 .style-div {
-  color:#555555;
-  background-color:#EEEEEE;
+  color: #555;
+  background-color: #eee;
+}
+.intro {
+  padding-top: 7.5em;
+  padding-left: 1em;
+}
+.portfolio-lg {
+  background-color: #fff;
+}
+.portfolio-sm {
+  background-color: #ddd;
+}
+.social {
+  list-style: none;
+}
+.cage {
+  width: 5em;
+}
+.svg-icon {
+  max-width: 100%;
+}
+#about {
+  background-color: #00f;
+}
+.icon-1 {
+  fill: #000;
+}
+.icon-1:hover {
+  fill: ##4078c0;
+  transform: scale(1.25);
+  transition: background-color 0.5s, transform 0.5s ease-out;
+}
+.icon-2 {
+  fill: #000;
+}
+.icon-2:hover {
+  fill: #0077b5;
+  transform: scale(1.25);
+  transition: background-color 0.5s, transform 0.5s ease-out;
+}
+.icon-3 {
+  fill: #000;
+}
+.icon-3:hover {
+  fill: #3b5998;
+  transform: scale(1.25);
+  transition: background-color 0.5s, transform 0.5s ease-out;
+}
+.icon-4 {
+  fill: #000;
+}
+.icon-4:hover {
+  fill: #0084b4;
+  transform: scale(1.25);
+  transition: background-color 0.5s, transform 0.5s ease-out;
 }
